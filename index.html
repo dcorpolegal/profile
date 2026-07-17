@@ -6,33 +6,31 @@
   <title>Adv. Samkeet Doshi | dCorpo Legal</title>
   
   <!-- WhatsApp & LinkedIn Preview Tags -->
-  <!-- IMPORTANT: Replace the two links below with your actual GitHub Pages URL -->
   <meta property="og:title" content="Adv. Samkeet Doshi | dCorpo Legal">
   <meta property="og:description" content="Your Virtual Legal Department. We handle your contracts, compliance, and commercial disputes.">
-  <meta property="og:image" content="https://dcorpolegal.github.io/profile/logo.png">
-  <meta property="og:url" content="https://dcorpolegal.github.io/profile/">
+  <meta property="og:image" content="https://YOUR-USERNAME.github.io/YOUR-REPOSITORY-NAME/logo.png">
+  <meta property="og:url" content="https://YOUR-USERNAME.github.io/YOUR-REPOSITORY-NAME/">
 
-  <!-- Upgraded Fonts: Lora (Premium Legal Feel) & Inter (Ultimate Readability) -->
+  <!-- Upgraded Fonts: Lora (Premium Legal) & Inter (Ultimate Readability) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
 
   <style>
-    /* MOBILE-FIRST DESIGN RULES */
+    /* VIBRANT & READABLE DESIGN SYSTEM */
     :root {
-      --bg-main: #F7F9FA;
-      --bg-dark: #111827;
-      --text-dark: #1F2937;
-      --text-muted: #4B5563;
-      --text-light: #F9FAFB;
-      --accent: #E11D48; 
+      --bg-main: #F4F7FB;      /* A fresh, cool off-white */
+      --bg-dark: #0B1121;      /* A very deep, premium midnight blue */
+      --text-dark: #0F172A;    /* Slate 900 for high contrast text */
+      --text-muted: #475569;   /* Slate 600 for highly readable body text */
+      --text-light: #F8FAFC;
+      --accent: #2563EB;       /* Vibrant Royal Blue */
+      --accent-warm: #E11D48;  /* Vibrant Rose for highlights (like numbers/quotes) */
       --card-bg: #FFFFFF;
-      --card-dark: #1F2937;
+      --card-dark: #1E293B;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -52,7 +50,7 @@
 
     .container {
       width: 100%;
-      max-width: 500px; 
+      max-width: 520px; /* Perfect width for mobile/tablet feel */
       margin: 0 auto;
       padding: 32px 20px;
     }
@@ -65,20 +63,22 @@
     }
     
     .brand-logo {
-      width: 120px; 
+      width: 130px; 
       height: auto;
-      margin-bottom: 20px;
-      border-radius: 8px; 
+      margin-bottom: 24px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Gives the logo a slight pop */
     }
 
     .hero h1 {
-      font-size: 2.2rem;
+      font-size: 2.4rem;
       margin: 0 0 8px 0;
       line-height: 1.2;
+      color: var(--bg-dark);
     }
     .hero .subtitle {
       font-size: 0.95rem;
-      font-weight: 600;
+      font-weight: 700;
       color: var(--accent);
       margin-bottom: 24px;
       text-transform: uppercase;
@@ -90,9 +90,10 @@
       font-style: italic;
       color: var(--text-muted);
       background: var(--card-bg);
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+      padding: 24px;
+      border-radius: 16px;
+      border-left: 5px solid var(--accent);
+      box-shadow: 0 10px 25px rgba(37, 99, 235, 0.05); /* Vibrant soft shadow */
       margin: 0;
       text-align: left;
     }
@@ -110,20 +111,21 @@
       gap: 8px;
     }
     .main-heading {
-      font-size: 1.75rem;
+      font-size: 1.8rem;
       margin-top: 0;
       margin-bottom: 24px;
       line-height: 1.3;
     }
 
-    /* Cards */
+    /* Standard Cards */
     .card {
       background: var(--card-bg);
       padding: 24px;
       border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.04);
       margin-bottom: 16px;
       text-align: left;
+      border: 1px solid rgba(0,0,0,0.02);
     }
     .card h3 {
       font-family: 'Inter', sans-serif;
@@ -134,10 +136,10 @@
       gap: 10px;
     }
     .card-num {
-      color: var(--accent);
+      color: var(--accent-warm);
       font-family: 'Lora', serif;
       font-size: 1.3rem;
-      font-weight: 600;
+      font-weight: 700;
     }
     .card p {
       font-size: 1rem;
@@ -145,35 +147,38 @@
       margin: 0;
     }
 
-    /* Stats Grid */
-    .stats-grid {
+    /* By The Numbers Grid */
+    .stats-grid-top {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 12px;
+      gap: 16px;
       margin-bottom: 32px;
     }
     .stat-box {
       background: var(--card-bg);
-      padding: 16px;
-      border-radius: 12px;
+      padding: 20px 16px;
+      border-radius: 16px;
       text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.05);
+      border-bottom: 3px solid var(--accent);
     }
     .stat-number {
       font-family: 'Lora', serif;
-      font-size: 1.4rem;
-      font-weight: 600;
-      color: var(--accent);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--bg-dark);
       margin: 0 0 4px 0;
     }
     .stat-label {
       font-size: 0.85rem;
-      font-weight: 500;
-      color: var(--text-muted);
+      font-weight: 600;
+      color: var(--accent);
       margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
-    /* Dark Mode Sections */
+    /* Dark Mode Sections (Triggers, GAINS) */
     .dark-mode {
       background-color: var(--bg-dark);
       color: var(--text-light);
@@ -181,12 +186,16 @@
     .dark-mode h2, .dark-mode h3 {
       color: var(--text-light);
     }
+    .dark-mode .section-title {
+      color: #60A5FA; /* Lighter blue for dark background */
+    }
     .dark-mode .card {
       background-color: var(--card-dark);
       border: 1px solid rgba(255,255,255,0.05);
+      box-shadow: none;
     }
     .dark-mode .card p, .dark-mode .trigger-solution {
-      color: #9CA3AF;
+      color: #94A3B8;
     }
     
     /* Triggers */
@@ -202,10 +211,10 @@
     }
     .trigger-quote {
       font-family: 'Lora', serif;
-      font-size: 1.15rem;
-      color: var(--accent);
+      font-size: 1.2rem;
+      color: #38BDF8; /* Vibrant cyan */
       font-style: italic;
-      margin: 0 0 8px 0;
+      margin: 0 0 10px 0;
     }
     .trigger-solution {
       font-size: 1rem;
@@ -213,83 +222,107 @@
       display: flex;
       gap: 10px;
     }
+    .trigger-solution span {
+      color: #F472B6; /* Vibrant pink arrow */
+      font-weight: bold;
+    }
 
     /* Highlight Script */
     .script-box {
-      background-color: #FFF0F2;
-      border-left: 4px solid var(--accent);
-      padding: 20px;
-      border-radius: 0 12px 12px 0;
+      background-color: #FEF2F2; /* Very soft warm background */
+      border-left: 5px solid var(--accent-warm);
+      padding: 24px;
+      border-radius: 0 16px 16px 0;
       margin-bottom: 24px;
     }
     .script-box p {
       font-family: 'Lora', serif;
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       font-style: italic;
       margin: 0;
       color: var(--text-dark);
+      font-weight: 500;
     }
 
-    /* GAINS Grid */
+    /* GAINS Grid - Fixed for Mobile */
+    .gains-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    /* The media query ensures that on phones, the grid stacks into 1 column */
+    @media (max-width: 480px) {
+      .gains-grid {
+        grid-template-columns: 1fr;
+      }
+      .gains-full {
+        grid-column: 1;
+      }
+    }
     .gains-letter {
       font-family: 'Lora', serif;
-      font-size: 2.2rem;
-      color: var(--accent);
+      font-size: 2.4rem;
+      color: #60A5FA;
       margin: 0;
       line-height: 1;
+      font-weight: 700;
     }
     .gains-title {
-      font-size: 0.75rem;
+      font-size: 0.8rem;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
       margin: 12px 0 8px 0;
       font-weight: 700;
-      color: #F3F4F6;
+      color: #F8FAFC;
     }
     .gains-full {
       grid-column: 1 / -1;
     }
 
-    /* Footer Buttons & Plugs */
-    .website-plug {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      margin-bottom: 24px;
-      text-align: center;
-      padding: 0 10px;
-    }
-    .website-plug a {
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 700;
+    /* Footer Buttons */
+    .action-container {
+      background: var(--card-bg);
+      padding: 32px 24px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      margin-bottom: 32px;
+      text-align: left;
     }
     
     .btn {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+      gap: 12px;
       width: 100%;
       padding: 18px;
-      margin-bottom: 12px;
-      background-color: var(--bg-dark);
-      color: var(--text-light);
-      text-decoration: none;
+      margin-bottom: 16px;
       border-radius: 12px;
       font-weight: 600;
       font-size: 1.05rem;
+      text-decoration: none;
+      transition: opacity 0.2s;
     }
-    .btn-outline {
-      background-color: transparent;
-      color: var(--bg-dark);
-      border: 2px solid var(--bg-dark);
+    .btn:active {
+      opacity: 0.8;
     }
     .btn-whatsapp {
       background-color: #25D366; 
       color: #FFFFFF;
-      border: none;
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
     }
-    .whatsapp-icon {
+    .btn-website {
+      background-color: var(--accent);
+      color: #FFFFFF;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    }
+    .btn-outline {
+      background-color: transparent;
+      color: var(--bg-dark);
+      border: 2px solid #CBD5E1;
+    }
+    .icon {
       width: 22px;
       height: 22px;
       fill: currentColor;
@@ -313,7 +346,7 @@
   <!-- BY THE NUMBERS -->
   <div class="container" style="padding-top: 0;">
     <div class="section-title">📊 By The Numbers</div>
-    <div class="stats-grid">
+    <div class="stats-grid-top">
       <div class="stat-box">
         <h3 class="stat-number">2024</h3>
         <p class="stat-label">Established</p>
@@ -324,7 +357,7 @@
       </div>
       <div class="stat-box">
         <h3 class="stat-number">50+</h3>
-        <p class="stat-label">Trademarks Filed</p>
+        <p class="stat-label">Trademarks</p>
       </div>
       <div class="stat-box">
         <h3 class="stat-number">30+</h3>
@@ -350,7 +383,7 @@
 
     <div class="card">
       <h3><span class="card-num">03</span> Debt Recovery 💰</h3>
-      <p>Cash flow is the lifeblood of your business. We specialize in MSME Samadhaan and commercial litigation, aggressively and legally recovering your delayed payments.</p>
+      <p>Cash flow is the lifeblood of your business. We specialize in MSME Samadhaan and commercial litigation, aggressively recovering your delayed payments.</p>
     </div>
   </div>
 
@@ -388,12 +421,12 @@
     <h2 class="main-heading">The simple referral script.</h2>
     
     <div class="script-box">
-      <div class="section-title" style="margin-bottom: 8px;">Say This:</div>
+      <div class="section-title" style="margin-bottom: 8px; color: var(--accent-warm);">Say This:</div>
       <p>"If you are launching a new venture, need to trademark your brand, or just want a reliable legal team on speed dial without crazy retainer fees, I highly recommend Samkeet at dCorpo Legal."</p>
     </div>
     
-    <div class="card" style="box-shadow: none; border: 1px solid #E5E7EB;">
-      <h3 style="font-size: 1rem;">How to connect us:</h3>
+    <div class="card" style="box-shadow: none; border: 2px dashed #CBD5E1;">
+      <h3 style="font-size: 1.05rem;">How to connect us:</h3>
       <p style="font-size: 0.95rem;">Drop them my digital vCard on WhatsApp with a quick note, or CC me in a brief email intro. I’ll take it from there with a warm, no-pressure chat.</p>
     </div>
   </div>
@@ -425,57 +458,63 @@
       <div class="section-title">⚡ Gains · Quick View</div>
       <h2 class="main-heading">Five things to remember about me.</h2>
       
-      <div class="stats-grid">
+      <div class="gains-grid">
         <div class="card">
           <p class="gains-letter">G</p>
           <div class="gains-title">Goal 🎯</div>
-          <p style="font-size: 0.9rem;">To be the first name BNI Jeet thinks of for Virtual Legal Retainers, Trademarks, & Debt Recovery.</p>
+          <p style="font-size: 0.95rem;">To serve more than 500 clients in the next 3 years; be a trusted name in the country for commercial legal issues.</p>
         </div>
         <div class="card">
           <p class="gains-letter">A</p>
           <div class="gains-title">Accomplishment 🏆</div>
-          <p style="font-size: 0.9rem;">Built a bi-city practice, recovered over ₹100 Cr, and filed 50+ trademarks.</p>
+          <p style="font-size: 0.95rem;">Built a bi-city practice, recovered over ₹100 Cr, and filed 50+ trademarks.</p>
         </div>
         <div class="card">
           <p class="gains-letter">I</p>
           <div class="gains-title">Interests 🧠</div>
-          <p style="font-size: 0.9rem;">Coding web apps, human psychology, and drives along Worli Promenade.</p>
+          <p style="font-size: 0.95rem;">Coding web apps, human psychology, and drives along Worli Promenade.</p>
         </div>
         <div class="card">
           <p class="gains-letter">N</p>
           <div class="gains-title">Networks 🌐</div>
-          <p style="font-size: 0.9rem;">Corporate Lawyers of BNI, tech incubators (BHAU), and commercial trade communities.</p>
+          <p style="font-size: 0.95rem;">PGCL Alumni Association, CAs in Mumbai & Pune, and Lawyers across Mumbai.</p>
         </div>
         <div class="card gains-full">
           <p class="gains-letter">S</p>
           <div class="gains-title">Skills ⚖️</div>
-          <p style="font-size: 0.9rem;">Translating complex legal risks into simple, actionable business advice—because the best legal strategy is the one you actually understand.</p>
+          <p style="font-size: 0.95rem;">Translating complex legal risks into simple, actionable business advice—because the best legal strategy is the one you actually understand.</p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- FOOTER -->
+  <!-- FOOTER ACTION PLAN -->
   <div class="container" style="text-align: center; padding-bottom: 60px;">
-    <div class="section-title" style="justify-content: center;">⏱️ The 24-Hour Action Plan</div>
-    <h2 class="main-heading">What you can do right now:</h2>
     
-    <p style="margin-bottom: 32px; text-align: left; background: #F3F4F6; padding: 16px; border-radius: 12px;">
-      Think of one person who recently started a business. Text them: <br><br>
-      <em>"Hey! Have you officially registered your trademark yet? If not, I know an excellent corporate lawyer. Want his contact card?"</em>
-    </p>
+    <div class="action-container">
+      <div class="section-title" style="color: var(--accent-warm);">⏱️ The 24-Hour Action Plan</div>
+      <h2 class="main-heading" style="font-size: 1.5rem; margin-bottom: 16px;">What you can do right now:</h2>
+      <p style="margin-bottom: 0;">
+        Think of one person who recently started a business. Text them: <br><br>
+        <em style="color: var(--bg-dark); font-weight: 600;">"Hey! Have you officially registered your trademark yet? If not, I know an excellent corporate lawyer. Want his contact card?"</em>
+      </p>
+    </div>
 
-    <p class="website-plug">
-      Want to read the fine print? Or just verify we actually exist outside this page? Snoop around our official home: <a href="https://www.dcorpo.legal" target="_blank">www.dcorpo.legal</a>
-    </p>
-    
-    <!-- IMPORTANT: Replace the zeros below with your actual phone number (include 91 for India) -->
-    <a href="https://wa.me/910000000000" class="btn btn-whatsapp" target="_blank">
-      <svg class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-23.2-115-65.1-157zM223.9 413.6c-33.1 0-65.5-8.9-94-25.8l-6.7-4-69.8 18.3L72 334.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 54.3 0 105.4 21.2 143.8 59.6 38.4 38.4 59.6 89.5 59.6 143.8 0 101.8-82.8 184.6-184.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+    <!-- BUTTONS -->
+    <a href="https://wa.me/919518597214" class="btn btn-whatsapp" target="_blank">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-23.2-115-65.1-157zM223.9 413.6c-33.1 0-65.5-8.9-94-25.8l-6.7-4-69.8 18.3L72 334.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 54.3 0 105.4 21.2 143.8 59.6 38.4 38.4 59.6 89.5 59.6 143.8 0 101.8-82.8 184.6-184.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
       Message on WhatsApp
     </a>
     
-    <a href="https://www.linkedin.com/in/samkeetdoshi" class="btn btn-outline" target="_blank">🔗 Connect on LinkedIn</a>
+    <a href="https://www.dcorpo.legal" class="btn btn-website" target="_blank">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64h185.4c2.2 20.4 3.3 41.8 3.3 64zm28.8-64h123.1c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32H376.7c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0H167.7c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 20.9 58.2 27 94.7zm-209 0H18.6C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192h123.1c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64H8.1C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6h176.6c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352H135.3zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6H493.4z"/></svg>
+      Visit www.dcorpo.legal
+    </a>
+    
+    <a href="https://www.linkedin.com/in/samkeetdoshi" class="btn btn-outline" target="_blank">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="fill: #0F172A;"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+      Connect on LinkedIn
+    </a>
   </div>
 
 </body>
