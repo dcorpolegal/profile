@@ -2,214 +2,232 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Adv. Samkeet Doshi | dCorpo Legal</title>
   
-  <!-- Google Fonts for that premium look -->
+  <!-- Upgraded Fonts: Lora (Premium Legal Feel) & Inter (Ultimate Readability) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
 
   <style>
-    /* THE DESIGN RULES (CSS) */
+    /* MOBILE-FIRST DESIGN RULES */
     :root {
-      --bg-light: #F9F9F9;
-      --bg-dark: #111111;
-      --text-dark: #1A1A1A;
-      --text-light: #F9F9F9;
-      --accent: #D81B60; /* The punchy pink/red from your reference */
+      --bg-main: #F7F9FA;
+      --bg-dark: #111827;
+      --text-dark: #1F2937;
+      --text-muted: #4B5563;
+      --text-light: #F9FAFB;
+      --accent: #E11D48; 
       --card-bg: #FFFFFF;
-      --card-dark: #222222;
+      --card-dark: #1F2937;
+    }
+
+    * {
+      box-sizing: border-box;
     }
 
     body {
       margin: 0;
       padding: 0;
       font-family: 'Inter', sans-serif;
-      background-color: var(--bg-light);
+      background-color: var(--bg-main);
       color: var(--text-dark);
+      font-size: 17px; 
       line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
     }
 
     h1, h2, h3, .serif {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Lora', serif;
+      color: var(--text-dark);
     }
 
     .container {
-      max-width: 600px; /* Keeps it looking like a neat card on desktops */
+      width: 100%;
+      max-width: 500px; 
       margin: 0 auto;
-      padding: 40px 24px;
+      padding: 32px 20px;
     }
 
-    /* Hero Section */
+    /* Logo & Hero Section */
     .hero {
-      text-align: left;
-      padding-top: 60px;
-      padding-bottom: 40px;
+      text-align: center;
+      padding-top: 40px;
+      padding-bottom: 32px;
     }
+    
+    .brand-logo {
+      width: 120px; 
+      height: auto;
+      margin-bottom: 20px;
+      border-radius: 8px; 
+    }
+
     .hero h1 {
-      font-size: 2.5rem;
-      margin: 0 0 10px 0;
+      font-size: 2.2rem;
+      margin: 0 0 8px 0;
       line-height: 1.2;
     }
     .hero .subtitle {
-      font-size: 1rem;
+      font-size: 0.95rem;
       font-weight: 600;
-      color: var(--text-dark);
+      color: var(--accent);
       margin-bottom: 24px;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 0.5px;
     }
     .philosophy {
-      font-size: 1.2rem;
-      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-family: 'Lora', serif;
       font-style: italic;
-      color: #555;
-      border-left: 4px solid var(--accent);
-      padding-left: 16px;
-      margin: 0;
-    }
-
-    /* Numbers Grid */
-    .grid-2x2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-bottom: 40px;
-    }
-    .stat-card {
+      color: var(--text-muted);
       background: var(--card-bg);
       padding: 20px;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+      margin: 0;
+      text-align: left;
+    }
+
+    /* Sections & Typography */
+    .section-title {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .main-heading {
+      font-size: 1.75rem;
+      margin-top: 0;
+      margin-bottom: 24px;
+      line-height: 1.3;
+    }
+
+    /* Cards */
+    .card {
+      background: var(--card-bg);
+      padding: 24px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+      margin-bottom: 16px;
+      text-align: left;
+    }
+    .card h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.15rem;
+      margin: 0 0 10px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .card-num {
+      color: var(--accent);
+      font-family: 'Lora', serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+    .card p {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* Stats Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    .stat-box {
+      background: var(--card-bg);
+      padding: 16px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
     }
     .stat-number {
-      font-size: 1.5rem;
+      font-family: 'Lora', serif;
+      font-size: 1.4rem;
       font-weight: 600;
       color: var(--accent);
       margin: 0 0 4px 0;
     }
-    .stat-text {
+    .stat-label {
       font-size: 0.85rem;
-      margin: 0;
-      color: #666;
-    }
-
-    /* Standard Cards (Why Us, Ideal Client) */
-    .section-title {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: var(--accent);
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-    .main-heading {
-      font-size: 2rem;
-      margin-top: 0;
-      margin-bottom: 24px;
-      line-height: 1.2;
-    }
-    .card {
-      background: var(--card-bg);
-      padding: 24px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-      margin-bottom: 16px;
-    }
-    .card-num {
-      color: var(--accent);
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin-right: 8px;
-    }
-    .card h3 {
-      display: inline;
-      font-family: 'Inter', sans-serif;
-      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--text-muted);
       margin: 0;
     }
-    .card p {
-      font-size: 0.95rem;
-      color: #444;
-      margin-top: 12px;
-      margin-bottom: 0;
-    }
 
-    /* Dark Section (Triggers, GAINS) */
-    .dark-section {
+    /* Dark Mode Sections */
+    .dark-mode {
       background-color: var(--bg-dark);
       color: var(--text-light);
     }
-    .dark-section .card {
-      background: var(--card-dark);
+    .dark-mode h2, .dark-mode h3 {
       color: var(--text-light);
     }
-    .dark-section .card p {
-      color: #BBB;
+    .dark-mode .card {
+      background-color: var(--card-dark);
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+    .dark-mode .card p, .dark-mode .trigger-solution {
+      color: #9CA3AF;
+    }
+    
+    /* Triggers */
+    .trigger-block {
+      margin-bottom: 24px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .trigger-block:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
     }
     .trigger-quote {
-      font-size: 1.1rem;
+      font-family: 'Lora', serif;
+      font-size: 1.15rem;
       color: var(--accent);
       font-style: italic;
-      margin-bottom: 8px;
-      font-family: 'Playfair Display', serif;
+      margin: 0 0 8px 0;
     }
     .trigger-solution {
-      font-size: 0.95rem;
-      margin-top: 0;
-      padding-bottom: 16px;
-      border-bottom: 1px solid #333;
-    }
-    .trigger-solution:last-child {
-      border-bottom: none;
+      font-size: 1rem;
+      margin: 0;
+      display: flex;
+      gap: 10px;
     }
 
-    /* Highlight Box (Script) */
-    .highlight-box {
-      background-color: #FCE4EC; /* Very soft pink */
+    /* Highlight Script */
+    .script-box {
+      background-color: #FFF0F2;
       border-left: 4px solid var(--accent);
-      padding: 24px;
+      padding: 20px;
       border-radius: 0 12px 12px 0;
       margin-bottom: 24px;
     }
-    .highlight-box p {
-      font-size: 1rem;
+    .script-box p {
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
       font-style: italic;
       margin: 0;
       color: var(--text-dark);
     }
 
-    /* Footer / Buttons */
-    .footer-action {
-      text-align: center;
-      padding-bottom: 60px;
-    }
-    .btn {
-      display: block;
-      width: 100%;
-      padding: 16px;
-      margin-bottom: 12px;
-      background-color: var(--bg-dark);
-      color: var(--text-light);
-      text-align: center;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 1rem;
-      transition: background 0.3s;
-    }
-    .btn-outline {
-      background-color: transparent;
-      color: var(--bg-dark);
-      border: 2px solid var(--bg-dark);
-    }
-    
-    /* GAINS Specific */
+    /* GAINS Grid */
     .gains-letter {
-      font-size: 2.5rem;
+      font-family: 'Lora', serif;
+      font-size: 2.2rem;
       color: var(--accent);
-      font-family: 'Playfair Display', serif;
       margin: 0;
       line-height: 1;
     }
@@ -217,12 +235,57 @@
       font-size: 0.75rem;
       text-transform: uppercase;
       letter-spacing: 1px;
-      margin-top: 8px;
-      margin-bottom: 8px;
-      color: #FFF;
+      margin: 12px 0 8px 0;
+      font-weight: 700;
+      color: #F3F4F6;
     }
-    .full-width {
+    .gains-full {
       grid-column: 1 / -1;
+    }
+
+    /* Footer Buttons & Plugs */
+    .website-plug {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      text-align: center;
+      padding: 0 10px;
+    }
+    .website-plug a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 700;
+    }
+    
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 18px;
+      margin-bottom: 12px;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+    .btn-outline {
+      background-color: transparent;
+      color: var(--bg-dark);
+      border: 2px solid var(--bg-dark);
+    }
+    .btn-whatsapp {
+      background-color: #25D366; 
+      color: #FFFFFF;
+      border: none;
+    }
+    .whatsapp-icon {
+      width: 22px;
+      height: 22px;
+      fill: currentColor;
     }
   </style>
 </head>
@@ -230,155 +293,182 @@
 
   <!-- HERO SECTION -->
   <div class="container hero">
+    <img src="logo.png" alt="dCorpo Legal" class="brand-logo">
+    
     <h1>Adv. Samkeet Doshi</h1>
-    <div class="subtitle">Founder, dCorpo Legal | Your Virtual Legal Dept.</div>
-    <p class="philosophy">"Good businesses are built on big dreams, but they survive on solid agreements and protected brands. We act as your in-house legal team—handling your contracts, compliance, and commercial disputes—so you can focus on building your legacy."</p>
+    <div class="subtitle">🏢 Founder, dCorpo Legal</div>
+    
+    <p class="philosophy">
+      "Good businesses are built on big dreams, but they survive on solid agreements and protected brands. We act as your in-house legal team so you can focus on building your legacy."
+    </p>
   </div>
 
   <!-- BY THE NUMBERS -->
   <div class="container" style="padding-top: 0;">
-    <div class="section-title">By The Numbers</div>
-    <div class="grid-2x2">
-      <div class="stat-card">
-        <h3 class="stat-number">Sept. 2024</h3>
-        <p class="stat-text">Established, backed by domain experts.</p>
+    <div class="section-title">📊 By The Numbers</div>
+    <div class="stats-grid">
+      <div class="stat-box">
+        <h3 class="stat-number">2024</h3>
+        <p class="stat-label">Established</p>
       </div>
-      <div class="stat-card">
+      <div class="stat-box">
         <h3 class="stat-number">₹100+ Cr</h3>
-        <p class="stat-text">Dues recovered for MSMEs globally.</p>
+        <p class="stat-label">Dues Recovered</p>
       </div>
-      <div class="stat-card">
+      <div class="stat-box">
         <h3 class="stat-number">50+</h3>
-        <p class="stat-text">Trademarks filed in just 6 months.</p>
+        <p class="stat-label">Trademarks Filed</p>
       </div>
-      <div class="stat-card">
+      <div class="stat-box">
         <h3 class="stat-number">30+</h3>
-        <p class="stat-text">Businesses served as their Virtual Legal Dept.</p>
+        <p class="stat-label">Retained Clients</p>
       </div>
     </div>
   </div>
 
-  <!-- WHY DCORPO -->
+  <!-- WHY DCORPO LEGAL -->
   <div class="container">
-    <div class="section-title">Why dCorpo Legal</div>
+    <div class="section-title">⭐ Why dCorpo Legal</div>
     <h2 class="main-heading">Three reasons growing businesses keep us on speed dial.</h2>
     
     <div class="card">
-      <h3><span class="card-num">01</span> Your Virtual Legal Department</h3>
-      <p>Get the strategic advantage of an in-house legal head without the full-time payroll. From drafting daily vendor agreements to employee NDAs and commercial dispute resolution, we handle the paperwork that keeps you protected.</p>
+      <h3><span class="card-num">01</span> Your Virtual Legal Dept. 🏢</h3>
+      <p>Get the strategic advantage of an in-house legal head without the full-time payroll. From vendor agreements to employee NDAs, we handle the paperwork that keeps you protected.</p>
     </div>
 
     <div class="card">
-      <h3><span class="card-num">02</span> Brand Protection & New Ventures</h3>
-      <p>Your brand is your biggest asset. Whether you are a startup launching a new venture or an established business needing trademark registration, we secure your intellectual property from day one.</p>
+      <h3><span class="card-num">02</span> Brand Protection ™️</h3>
+      <p>Your brand is your biggest asset. Whether launching a new venture or securing an established business, we handle rapid trademark registrations and renewals from day one.</p>
     </div>
 
     <div class="card">
-      <h3><span class="card-num">03</span> Commercial & MSME Debt Recovery</h3>
+      <h3><span class="card-num">03</span> Debt Recovery 💰</h3>
       <p>Cash flow is the lifeblood of your business. We specialize in MSME Samadhaan and commercial litigation, aggressively and legally recovering your delayed payments.</p>
     </div>
   </div>
 
-  <!-- TRIGGER PHRASES (DARK SECTION) -->
-  <div class="dark-section">
+  <!-- TRIGGER PHRASES (DARK MODE) -->
+  <div class="dark-mode">
     <div class="container">
-      <div class="section-title">Listen For These</div>
+      <div class="section-title">🎧 Listen For These</div>
       <h2 class="main-heading">If you hear this, think of me.</h2>
       
-      <p class="trigger-quote">"We are starting a new business / launching a product."</p>
-      <p class="trigger-solution">→ They need foundational agreements and compliance. Warm intro to me.</p>
+      <div class="trigger-block">
+        <p class="trigger-quote">"We are starting a new business..."</p>
+        <p class="trigger-solution"><span>→</span> They need foundational agreements. Warm intro to me.</p>
+      </div>
 
-      <p class="trigger-quote">"Someone is using a logo or name that looks exactly like ours."</p>
-      <p class="trigger-solution">→ Immediate trademark filing or infringement notice required. Refer them.</p>
+      <div class="trigger-block">
+        <p class="trigger-quote">"Someone is using a logo that looks like ours..."</p>
+        <p class="trigger-solution"><span>→</span> Immediate trademark filing required. Refer them.</p>
+      </div>
 
-      <p class="trigger-quote">"My vendors are delaying payments again and it's choking our cash flow."</p>
-      <p class="trigger-solution">→ MSME debt recovery is our specialty. Connect us.</p>
+      <div class="trigger-block">
+        <p class="trigger-quote">"My vendors are delaying payments again..."</p>
+        <p class="trigger-solution"><span>→</span> MSME debt recovery is our specialty. Connect us.</p>
+      </div>
 
-      <p class="trigger-quote">"We are hiring a bunch of freelancers and new employees this month."</p>
-      <p class="trigger-solution">→ They need watertight employment agreements and NDAs. Refer immediately.</p>
+      <div class="trigger-block">
+        <p class="trigger-quote">"We are hiring a bunch of freelancers..."</p>
+        <p class="trigger-solution"><span>→</span> They need watertight NDAs. Refer immediately.</p>
+      </div>
     </div>
   </div>
 
   <!-- REFERRAL SCRIPT -->
   <div class="container">
-    <div class="section-title">What To Say</div>
+    <div class="section-title">💬 What To Say</div>
     <h2 class="main-heading">The simple referral script.</h2>
     
-    <div class="highlight-box">
-      <div class="section-title">Say This</div>
-      <p>"If you are launching a new venture, need to trademark your brand, or just want a reliable legal team on speed dial without crazy retainer fees, I highly recommend Samkeet at dCorpo Legal. They handle all the commercial headaches."</p>
+    <div class="script-box">
+      <div class="section-title" style="margin-bottom: 8px;">Say This:</div>
+      <p>"If you are launching a new venture, need to trademark your brand, or just want a reliable legal team on speed dial without crazy retainer fees, I highly recommend Samkeet at dCorpo Legal."</p>
     </div>
     
-    <h3>How to connect us naturally:</h3>
-    <p>Just drop them my digital vCard on WhatsApp with a quick note saying, <em>"Here is Samkeet's contact, he is excellent with corporate law."</em> Alternatively, just CC me in a brief email intro. I’ll take it from there.</p>
+    <div class="card" style="box-shadow: none; border: 1px solid #E5E7EB;">
+      <h3 style="font-size: 1rem;">How to connect us:</h3>
+      <p style="font-size: 0.95rem;">Drop them my digital vCard on WhatsApp with a quick note, or CC me in a brief email intro. I’ll take it from there with a warm, no-pressure chat.</p>
+    </div>
   </div>
 
   <!-- IDEAL CLIENT -->
   <div class="container">
-    <div class="section-title">My Ideal Client</div>
+    <div class="section-title">🎯 My Ideal Client</div>
     <h2 class="main-heading">Who I'd love to meet through you.</h2>
     
     <div class="card">
-      <div class="section-title">Startups & New Ventures</div>
-      <p>Entrepreneurs who are planning to start a new business and need their legal foundations, incorporation, and initial contracts drafted perfectly from day one.</p>
+      <div class="section-title">🚀 Startups & New Ventures</div>
+      <p>Entrepreneurs starting a new business who need their legal foundations and initial contracts drafted perfectly.</p>
     </div>
 
     <div class="card">
-      <div class="section-title">Brand Owners & Creators</div>
-      <p>Anyone who has built a brand, logo, or unique product and needs to secure their identity through rapid Trademark registration or renewals.</p>
+      <div class="section-title">🎨 Brand Owners</div>
+      <p>Anyone who has built a unique brand or product and needs to secure their identity through Trademark registration.</p>
     </div>
 
     <div class="card">
-      <div class="section-title">Growing SMEs (10-50 Employees)</div>
-      <p>Directors sitting on a pile of unpaid invoices who need their money recovered, or scaling businesses that need regular contract vetting.</p>
+      <div class="section-title">🏭 Growing SMEs (10-50 Staff)</div>
+      <p>Directors sitting on unpaid invoices, or scaling businesses that need regular contract vetting.</p>
     </div>
   </div>
 
-  <!-- GAINS (DARK SECTION) -->
-  <div class="dark-section">
+  <!-- GAINS GRID (DARK MODE) -->
+  <div class="dark-mode">
     <div class="container">
-      <div class="section-title">Gains · Quick View</div>
+      <div class="section-title">⚡ Gains · Quick View</div>
       <h2 class="main-heading">Five things to remember about me.</h2>
       
-      <div class="grid-2x2">
+      <div class="stats-grid">
         <div class="card">
           <p class="gains-letter">G</p>
-          <div class="gains-title">Goal</div>
-          <p>To be the first name BNI Jeet and the startup ecosystem thinks of for Virtual Legal Retainers, Trademarks, and Debt Recovery.</p>
+          <div class="gains-title">Goal 🎯</div>
+          <p style="font-size: 0.9rem;">To be the first name BNI Jeet thinks of for Virtual Legal Retainers, Trademarks, & Debt Recovery.</p>
         </div>
         <div class="card">
           <p class="gains-letter">A</p>
-          <div class="gains-title">Accomplishment</div>
-          <p>Built a bi-city practice. Our experts have recovered over ₹100 Cr for MSMEs and filed 50+ trademarks in 6 months.</p>
+          <div class="gains-title">Accomplishment 🏆</div>
+          <p style="font-size: 0.9rem;">Built a bi-city practice, recovered over ₹100 Cr, and filed 50+ trademarks.</p>
         </div>
         <div class="card">
           <p class="gains-letter">I</p>
-          <div class="gains-title">Interests</div>
-          <p>Coding custom web apps, human psychology, and late-night drives along the Worli Promenade to reset.</p>
+          <div class="gains-title">Interests 🧠</div>
+          <p style="font-size: 0.9rem;">Coding web apps, human psychology, and drives along Worli Promenade.</p>
         </div>
         <div class="card">
           <p class="gains-letter">N</p>
-          <div class="gains-title">Networks</div>
-          <p>Corporate Lawyers of BNI Jeet, tech incubators (BHAU), and Mumbai/Pune commercial trade communities.</p>
+          <div class="gains-title">Networks 🌐</div>
+          <p style="font-size: 0.9rem;">Corporate Lawyers of BNI, tech incubators (BHAU), and commercial trade communities.</p>
         </div>
-        <div class="card full-width">
+        <div class="card gains-full">
           <p class="gains-letter">S</p>
-          <div class="gains-title">Skills</div>
-          <p>Translating complex legal risks into simple, actionable business advice—because the best legal strategy is the one you actually understand.</p>
+          <div class="gains-title">Skills ⚖️</div>
+          <p style="font-size: 0.9rem;">Translating complex legal risks into simple, actionable business advice—because the best legal strategy is the one you actually understand.</p>
         </div>
       </div>
     </div>
   </div>
 
   <!-- FOOTER -->
-  <div class="container footer-action">
-    <div class="section-title">The 24-Hour Action Plan</div>
-    <h2 class="main-heading" style="font-size: 1.5rem;">What you can do right now:</h2>
-    <p style="margin-bottom: 30px;">Think of one person you know who recently started a business. Text them: <em>"Hey! Have you officially registered your trademark yet? If not, I know an excellent corporate lawyer. Want his contact card?"</em></p>
+  <div class="container" style="text-align: center; padding-bottom: 60px;">
+    <div class="section-title" style="justify-content: center;">⏱️ The 24-Hour Action Plan</div>
+    <h2 class="main-heading">What you can do right now:</h2>
     
-    <!-- Add your actual links inside the href="" below -->
-    <a href="mailto:your.email@dcorpolegal.com" class="btn">Email Me</a>
-    <a href="https://linkedin.com/in/yourprofile" class="btn btn-outline">Connect on LinkedIn</a>
+    <p style="margin-bottom: 32px; text-align: left; background: #F3F4F6; padding: 16px; border-radius: 12px;">
+      Think of one person who recently started a business. Text them: <br><br>
+      <em>"Hey! Have you officially registered your trademark yet? If not, I know an excellent corporate lawyer. Want his contact card?"</em>
+    </p>
+
+    <p class="website-plug">
+      Want to read the fine print? Or just verify we actually exist outside this page? Snoop around our official home: <a href="https://www.dcorpo.legal" target="_blank">www.dcorpo.legal</a>
+    </p>
+    
+    <!-- IMPORTANT: Replace the zeros below with your actual phone number (include 91 for India) -->
+    <a href="https://wa.me/910000000000" class="btn btn-whatsapp" target="_blank">
+      <svg class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-23.2-115-65.1-157zM223.9 413.6c-33.1 0-65.5-8.9-94-25.8l-6.7-4-69.8 18.3L72 334.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 54.3 0 105.4 21.2 143.8 59.6 38.4 38.4 59.6 89.5 59.6 143.8 0 101.8-82.8 184.6-184.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+      Message on WhatsApp
+    </a>
+    
+    <a href="https://linkedin.com/in/yourprofile" class="btn btn-outline" target="_blank">🔗 Connect on LinkedIn</a>
   </div>
 
 </body>
