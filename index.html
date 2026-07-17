@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adv. Samkeet Doshi | dCorpo Legal</title>
+  
+  <!-- Google Fonts for that premium look -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+
+  <style>
+    /* THE DESIGN RULES (CSS) */
+    :root {
+      --bg-light: #F9F9F9;
+      --bg-dark: #111111;
+      --text-dark: #1A1A1A;
+      --text-light: #F9F9F9;
+      --accent: #D81B60; /* The punchy pink/red from your reference */
+      --card-bg: #FFFFFF;
+      --card-dark: #222222;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, .serif {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .container {
+      max-width: 600px; /* Keeps it looking like a neat card on desktops */
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: left;
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin: 0 0 10px 0;
+      line-height: 1.2;
+    }
+    .hero .subtitle {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 24px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .philosophy {
+      font-size: 1.2rem;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: #555;
+      border-left: 4px solid var(--accent);
+      padding-left: 16px;
+      margin: 0;
+    }
+
+    /* Numbers Grid */
+    .grid-2x2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+    .stat-card {
+      background: var(--card-bg);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+    .stat-number {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin: 0 0 4px 0;
+    }
+    .stat-text {
+      font-size: 0.85rem;
+      margin: 0;
+      color: #666;
+    }
+
+    /* Standard Cards (Why Us, Ideal Client) */
+    .section-title {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .main-heading {
+      font-size: 2rem;
+      margin-top: 0;
+      margin-bottom: 24px;
+      line-height: 1.2;
+    }
+    .card {
+      background: var(--card-bg);
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+      margin-bottom: 16px;
+    }
+    .card-num {
+      color: var(--accent);
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-right: 8px;
+    }
+    .card h3 {
+      display: inline;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1rem;
+      margin: 0;
+    }
+    .card p {
+      font-size: 0.95rem;
+      color: #444;
+      margin-top: 12px;
+      margin-bottom: 0;
+    }
+
+    /* Dark Section (Triggers, GAINS) */
+    .dark-section {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+    }
+    .dark-section .card {
+      background: var(--card-dark);
+      color: var(--text-light);
+    }
+    .dark-section .card p {
+      color: #BBB;
+    }
+    .trigger-quote {
+      font-size: 1.1rem;
+      color: var(--accent);
+      font-style: italic;
+      margin-bottom: 8px;
+      font-family: 'Playfair Display', serif;
+    }
+    .trigger-solution {
+      font-size: 0.95rem;
+      margin-top: 0;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #333;
+    }
+    .trigger-solution:last-child {
+      border-bottom: none;
+    }
+
+    /* Highlight Box (Script) */
+    .highlight-box {
+      background-color: #FCE4EC; /* Very soft pink */
+      border-left: 4px solid var(--accent);
+      padding: 24px;
+      border-radius: 0 12px 12px 0;
+      margin-bottom: 24px;
+    }
+    .highlight-box p {
+      font-size: 1rem;
+      font-style: italic;
+      margin: 0;
+      color: var(--text-dark);
+    }
+
+    /* Footer / Buttons */
+    .footer-action {
+      text-align: center;
+      padding-bottom: 60px;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 16px;
+      margin-bottom: 12px;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      text-align: center;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+    .btn-outline {
+      background-color: transparent;
+      color: var(--bg-dark);
+      border: 2px solid var(--bg-dark);
+    }
+    
+    /* GAINS Specific */
+    .gains-letter {
+      font-size: 2.5rem;
+      color: var(--accent);
+      font-family: 'Playfair Display', serif;
+      margin: 0;
+      line-height: 1;
+    }
+    .gains-title {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 8px;
+      margin-bottom: 8px;
+      color: #FFF;
+    }
+    .full-width {
+      grid-column: 1 / -1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO SECTION -->
+  <div class="container hero">
+    <h1>Adv. Samkeet Doshi</h1>
+    <div class="subtitle">Founder, dCorpo Legal | Your Virtual Legal Dept.</div>
+    <p class="philosophy">"Good businesses are built on big dreams, but they survive on solid agreements and protected brands. We act as your in-house legal team—handling your contracts, compliance, and commercial disputes—so you can focus on building your legacy."</p>
+  </div>
+
+  <!-- BY THE NUMBERS -->
+  <div class="container" style="padding-top: 0;">
+    <div class="section-title">By The Numbers</div>
+    <div class="grid-2x2">
+      <div class="stat-card">
+        <h3 class="stat-number">Sept. 2024</h3>
+        <p class="stat-text">Established, backed by domain experts.</p>
+      </div>
+      <div class="stat-card">
+        <h3 class="stat-number">₹100+ Cr</h3>
+        <p class="stat-text">Dues recovered for MSMEs globally.</p>
+      </div>
+      <div class="stat-card">
+        <h3 class="stat-number">50+</h3>
+        <p class="stat-text">Trademarks filed in just 6 months.</p>
+      </div>
+      <div class="stat-card">
+        <h3 class="stat-number">30+</h3>
+        <p class="stat-text">Businesses served as their Virtual Legal Dept.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHY DCORPO -->
+  <div class="container">
+    <div class="section-title">Why dCorpo Legal</div>
+    <h2 class="main-heading">Three reasons growing businesses keep us on speed dial.</h2>
+    
+    <div class="card">
+      <h3><span class="card-num">01</span> Your Virtual Legal Department</h3>
+      <p>Get the strategic advantage of an in-house legal head without the full-time payroll. From drafting daily vendor agreements to employee NDAs and commercial dispute resolution, we handle the paperwork that keeps you protected.</p>
+    </div>
+
+    <div class="card">
+      <h3><span class="card-num">02</span> Brand Protection & New Ventures</h3>
+      <p>Your brand is your biggest asset. Whether you are a startup launching a new venture or an established business needing trademark registration, we secure your intellectual property from day one.</p>
+    </div>
+
+    <div class="card">
+      <h3><span class="card-num">03</span> Commercial & MSME Debt Recovery</h3>
+      <p>Cash flow is the lifeblood of your business. We specialize in MSME Samadhaan and commercial litigation, aggressively and legally recovering your delayed payments.</p>
+    </div>
+  </div>
+
+  <!-- TRIGGER PHRASES (DARK SECTION) -->
+  <div class="dark-section">
+    <div class="container">
+      <div class="section-title">Listen For These</div>
+      <h2 class="main-heading">If you hear this, think of me.</h2>
+      
+      <p class="trigger-quote">"We are starting a new business / launching a product."</p>
+      <p class="trigger-solution">→ They need foundational agreements and compliance. Warm intro to me.</p>
+
+      <p class="trigger-quote">"Someone is using a logo or name that looks exactly like ours."</p>
+      <p class="trigger-solution">→ Immediate trademark filing or infringement notice required. Refer them.</p>
+
+      <p class="trigger-quote">"My vendors are delaying payments again and it's choking our cash flow."</p>
+      <p class="trigger-solution">→ MSME debt recovery is our specialty. Connect us.</p>
+
+      <p class="trigger-quote">"We are hiring a bunch of freelancers and new employees this month."</p>
+      <p class="trigger-solution">→ They need watertight employment agreements and NDAs. Refer immediately.</p>
+    </div>
+  </div>
+
+  <!-- REFERRAL SCRIPT -->
+  <div class="container">
+    <div class="section-title">What To Say</div>
+    <h2 class="main-heading">The simple referral script.</h2>
+    
+    <div class="highlight-box">
+      <div class="section-title">Say This</div>
+      <p>"If you are launching a new venture, need to trademark your brand, or just want a reliable legal team on speed dial without crazy retainer fees, I highly recommend Samkeet at dCorpo Legal. They handle all the commercial headaches."</p>
+    </div>
+    
+    <h3>How to connect us naturally:</h3>
+    <p>Just drop them my digital vCard on WhatsApp with a quick note saying, <em>"Here is Samkeet's contact, he is excellent with corporate law."</em> Alternatively, just CC me in a brief email intro. I’ll take it from there.</p>
+  </div>
+
+  <!-- IDEAL CLIENT -->
+  <div class="container">
+    <div class="section-title">My Ideal Client</div>
+    <h2 class="main-heading">Who I'd love to meet through you.</h2>
+    
+    <div class="card">
+      <div class="section-title">Startups & New Ventures</div>
+      <p>Entrepreneurs who are planning to start a new business and need their legal foundations, incorporation, and initial contracts drafted perfectly from day one.</p>
+    </div>
+
+    <div class="card">
+      <div class="section-title">Brand Owners & Creators</div>
+      <p>Anyone who has built a brand, logo, or unique product and needs to secure their identity through rapid Trademark registration or renewals.</p>
+    </div>
+
+    <div class="card">
+      <div class="section-title">Growing SMEs (10-50 Employees)</div>
+      <p>Directors sitting on a pile of unpaid invoices who need their money recovered, or scaling businesses that need regular contract vetting.</p>
+    </div>
+  </div>
+
+  <!-- GAINS (DARK SECTION) -->
+  <div class="dark-section">
+    <div class="container">
+      <div class="section-title">Gains · Quick View</div>
+      <h2 class="main-heading">Five things to remember about me.</h2>
+      
+      <div class="grid-2x2">
+        <div class="card">
+          <p class="gains-letter">G</p>
+          <div class="gains-title">Goal</div>
+          <p>To be the first name BNI Jeet and the startup ecosystem thinks of for Virtual Legal Retainers, Trademarks, and Debt Recovery.</p>
+        </div>
+        <div class="card">
+          <p class="gains-letter">A</p>
+          <div class="gains-title">Accomplishment</div>
+          <p>Built a bi-city practice. Our experts have recovered over ₹100 Cr for MSMEs and filed 50+ trademarks in 6 months.</p>
+        </div>
+        <div class="card">
+          <p class="gains-letter">I</p>
+          <div class="gains-title">Interests</div>
+          <p>Coding custom web apps, human psychology, and late-night drives along the Worli Promenade to reset.</p>
+        </div>
+        <div class="card">
+          <p class="gains-letter">N</p>
+          <div class="gains-title">Networks</div>
+          <p>Corporate Lawyers of BNI Jeet, tech incubators (BHAU), and Mumbai/Pune commercial trade communities.</p>
+        </div>
+        <div class="card full-width">
+          <p class="gains-letter">S</p>
+          <div class="gains-title">Skills</div>
+          <p>Translating complex legal risks into simple, actionable business advice—because the best legal strategy is the one you actually understand.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="container footer-action">
+    <div class="section-title">The 24-Hour Action Plan</div>
+    <h2 class="main-heading" style="font-size: 1.5rem;">What you can do right now:</h2>
+    <p style="margin-bottom: 30px;">Think of one person you know who recently started a business. Text them: <em>"Hey! Have you officially registered your trademark yet? If not, I know an excellent corporate lawyer. Want his contact card?"</em></p>
+    
+    <!-- Add your actual links inside the href="" below -->
+    <a href="mailto:your.email@dcorpolegal.com" class="btn">Email Me</a>
+    <a href="https://linkedin.com/in/yourprofile" class="btn btn-outline">Connect on LinkedIn</a>
+  </div>
+
+</body>
+</html>
